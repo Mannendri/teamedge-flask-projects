@@ -1,0 +1,46 @@
+[
+{
+    "artist":"Harry Styles",
+    "album": "Fine Line",
+    "year": 2019,
+    "songs": [
+        "Golden",
+        "Falling",
+        "Watermelon Sugar",
+        "Adore You"
+    ]
+},
+{
+    "artist":"Justin Bieber",
+    "album": "Changes",
+    "year": 2020,
+    "songs": [
+        "Yummy",
+        "Intentions",
+        "E.T.A.",
+        "Habitual"
+    ]
+},
+{
+    "artist":"The Weeknd",
+    "album": "After Hours",
+    "year": 2020,
+    "songs": [
+        "Save Your Tears",
+        "After Hours",
+        "Faith",
+        "Alone Again"
+    ]
+},
+{
+    "artist":"Michael Jackson",
+    "album": "Bad",
+    "year": 1987,
+    "songs": [
+        "Bad",
+        "Man in the Mirror",
+        "Dirty Diana",
+        "Smooth Criminal"
+    ]
+}
+]

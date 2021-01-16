@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    {% for album in albums %}
+        <div class="album">
+            <h1>{{ album["album"] }}</h1>
+            <h4>{{ album["year"] }}, By {{ album["artist"] }}</h4>
+            <ul>
+                {% for song in album["songs"] %}
+                <li>{{ song }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</body>
+</html>

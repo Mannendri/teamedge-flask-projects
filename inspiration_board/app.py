@@ -1,4 +1,4 @@
-from flask import Flask, render_template, current_app as app
+from flask import Flask, request, render_template, current_app as app
 from sense_hat import SenseHat  
 from time import sleep
 
@@ -12,9 +12,9 @@ def index():
         sense.show_message(message)
     return render_template('index.html')
 
-@app.route('/all')
+@app.route('/all_messages')
 def all_messages():
-    return render_template()
+    return render_template('all_messages.html')
 
 
 if __name__ == '__main__':

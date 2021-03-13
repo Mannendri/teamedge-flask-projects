@@ -4,16 +4,19 @@ from time import sleep
 
 app = Flask(__name__)
 sense = SenseHat()
-
+messages = []
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == "POST":
         message = request.form.get("message")
+        messages.append(message)
         sense.show_message(message)
     return render_template('index.html')
 
 @app.route('/all_messages')
 def all_messages():
+    for message in messages:
+        sense.show_message(message)
     return render_template('all_messages.html')
 
 

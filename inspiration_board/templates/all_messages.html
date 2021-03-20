@@ -6,7 +6,9 @@
     <title>Inspiration Board</title>
 </head>
 <body>
-    {% for message in messages %}
+    {% for author, message in messages.items() %}
+    <p>{{ message }}</p>
+    <p>From: {{ author }}</p>
     {% endfor %}
 </body>
 </html>

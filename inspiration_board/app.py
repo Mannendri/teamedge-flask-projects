@@ -8,6 +8,7 @@ messages = {}
 @app.route('/')
 def index():
     return render_template('index.html')
+    
 @app.route('/success', methods=['GET', 'POST'])
 def success():
     if request.method == "POST":
@@ -16,7 +17,6 @@ def success():
         messages[author] = message
         sense.show_message(message)
     return render_template('success.html', message = message, author = author)
-
 
 @app.route('/all_messages')
 def all_messages():

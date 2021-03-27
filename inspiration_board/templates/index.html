@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/index.css">                                         
+    <link rel="stylesheet" href="static/style.css">                                         
     <title>Inspiration Board</title>
 </head>
 <body>
-    <form action="/success" method="post">
-        <label for="message">Enter an inspirational message:</label>
+    <form id="message-form" action="/success" method="post">
+        <h1>Enter an inspirational message</h1>
         <input type="text" id="message" name="message" placeholder="Message ..."><br><br>
-        <label for="author">From:</label>
         <input type="text" id="author" name="author" placeholder="Name ..."><br><br>
         <input type="submit" value="Submit">
     </form>

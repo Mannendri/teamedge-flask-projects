@@ -1,0 +1,32 @@
+#message-form{
+    width:50vw;
+    margin:auto;
+    background-color:aquamarine;
+    border-radius: 20px;
+    color:salmon;
+    padding:10px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+input[type="submit"]{
+    padding:5px;
+    border-radius:20px;
+    background-color: salmon;
+    color:aquamarine;
+    padding: 10px 20px;
+    border:none;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+
+input[type="text"]{
+    padding:10px;
+    border-radius: 20px;
+    border:none;
+}
+
+
+input:focus{
+    border:none;
+}

@@ -6,9 +6,9 @@
     <title>Inspiration Board</title>
 </head>
 <body>
-    {% for author, message in messages.items() %}
-    <p>"{{ message }}"</p>
-    <p>From: {{ author }}</p>
+    {% for message in messages %}
+    <p>"{{ message["message"] }}"</p>
+    <p>From: {{ message["name"] }}</p>
     <hr>
     {% endfor %}
     <a href="/">Go back home.</a>

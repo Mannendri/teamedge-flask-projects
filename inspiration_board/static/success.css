@@ -1,0 +1,36 @@
+#main{
+    width:50vw;
+    margin:auto;
+    background-color:aquamarine;
+    border-radius: 20px;
+    color:salmon;
+    padding:10px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+a{
+    display:inline-block;
+    padding:5px;
+    border-radius:20px;
+    background-color: orange;
+    color:blue;
+    padding: 10px 20px;
+    border:none;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 20px 0px;
+}
+a:hover{
+    display:inline-block;
+    padding:5px;
+    border-radius:20px;
+    background-color: blue;
+    color:orange;
+    padding: 10px 20px;
+    border:none;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 20px 0px;
+}
+

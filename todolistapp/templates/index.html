@@ -8,10 +8,16 @@
 <body>
     <form id="item-form" action="/todo" method="post">
         <h1>Enter a to-do list item:</h1>
-        <input type="text" id="description" name="description" placeholder="Message ...">
-        <input type="datetime-local" id="date" name="date">
+        <input type="text" id="description" name="description" placeholder="Message ..." required>
+        <input type="datetime-local" id="date" name="date" placeholder="Optional reminder at ...">
         <br><br>
         <input type="submit" value="Submit">
     </form>
+    {% for task in tasks %}
+    <p>"{{ task["description"] }}"</p>
+    <p>Due: {{ task["reminder"] }}</p>
+    <hr>
+    {% endfor %}
+    
 </body>
 </html>

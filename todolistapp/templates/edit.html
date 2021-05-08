@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do, or Not To Do</title>
+</head>
+<body>
+    <form id="edit-item-form" action="{{ '/edit/%s' % task['rowid'] }}" method="post">
+        <h1>Edit to-do list item:</h1>
+        <label for="edit-description">Description</label>
+        <input type="text" id="edit-description" name="edit-description" value="{{task['description']}}" >
+        <label for="edit-date">Date</label>
+        <input type="datetime-local" id="edit-date" name="edit-date" value="{{task['reminder']}}">
+        <br><br>
+        <input type="submit" value="Done">
+    </form>
+</body>
+</html>

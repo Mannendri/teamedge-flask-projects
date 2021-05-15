@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do, or Not To Do</title>
+    <link rel="stylesheet" href="static/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
-    <form id="item-form" action="/todo" method="post">
-        <h1>Enter a to-do list item:</h1>
+    <h1 class="heading">To Do, or Not To Do</h1>
+    <form class="item-form" action="/todo" method="post">
+        <h3>Enter a to-do list item:</h3>
         <label for="description">Description:</label>
         <input type="text" id="description" name="description" placeholder="Task ..." required>
         <br>
@@ -17,14 +21,15 @@
         <input type="submit" value="Add">
     </form>
     {% for task in tasks %}
-    <div>
-        <p>"{{ task["description"] }}"</p>
-        <p>Due: {{ task["reminder"] }}</p>
-        <a href="{{ '/edit/%s' % task['rowid'] }}"><button>Edit</button></a>
-        <a href="{{ '/complete/%s' % task['rowid'] }}"><button>Complete</button></a>
-        <a href="{{ '/delete/%s' % task['rowid'] }}"><button>Delete</button></a>
+    <div id="task-body">
+        <div>
+            <p>"{{ task["description"] }}"</p>
+            <p>Due: {{ task["reminder"] }}</p>
+        </div>
+        <a href="{{ '/edit/%s' % task['rowid'] }}"><span class="material-icons">edit</span></a>
+        <a href="{{ '/complete/%s' % task['rowid'] }}"><span class="material-icons">verified</span></a>
+        <a href="{{ '/delete/%s' % task['rowid'] }}"><span class="material-icons">delete</span></a>
     </div>
-    <hr>
     {% endfor %}
     
 </body>

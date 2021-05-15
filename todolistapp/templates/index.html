@@ -22,6 +22,7 @@
         <p>Due: {{ task["reminder"] }}</p>
         <a href="{{ '/edit/%s' % task['rowid'] }}"><button>Edit</button></a>
         <a href="{{ '/complete/%s' % task['rowid'] }}"><button>Complete</button></a>
+        <a href="{{ '/delete/%s' % task['rowid'] }}"><button>Delete</button></a>
     </div>
     <hr>
     {% endfor %}

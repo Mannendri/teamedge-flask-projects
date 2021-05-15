@@ -58,6 +58,14 @@ def complete(btn):
     conn.commit()     
     return redirect(url_for('index'))  
 
+@app.route('/delete/<btn>')
+def delete(btn):
+    conn = sqlite3.connect("./static/data/tasks.db")
+    curs = conn.cursor()
+    curs.execute("DELETE FROM tasks WHERE rowid=(?)", (btn,))
+    conn.commit()     
+    return redirect(url_for('index'))  
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
     
